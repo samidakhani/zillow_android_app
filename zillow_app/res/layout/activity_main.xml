@@ -1,0 +1,198 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:tools="http://schemas.android.com/tools"
+ android:layout_width="fill_parent"
+ android:layout_height="fill_parent"
+ android:background="@drawable/background"
+ android:orientation="vertical"
+ android:paddingLeft="15dp"
+ android:paddingRight="15dp"
+ android:paddingTop="15dp"
+ tools:context="${relativePackage}.${activityClass}" >
+
+    
+    
+  <!--Header Title Start -->  
+  <TextView
+   android:id="@+id/tv_title_message"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="@string/title_message"
+   android:layout_gravity="left"
+   android:textStyle="bold"
+   android:textColor="#fff"
+   android:textSize="22sp"
+   android:paddingBottom="15dp" />
+  
+  <!--Header Title End -->
+  
+  
+ <!-- Address Start--> 
+  
+ <!--Address Dispaly  -->   
+  <TextView
+   android:id="@+id/tv_address"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="@string/address"
+   android:layout_gravity="left"
+   android:textColor="#fff"
+   android:textSize="16sp"
+   android:paddingBottom="5dp" />
+    
+  <!-- Address Box -->
+   <EditText
+    android:id="@+id/ed_address"
+    android:layout_width="fill_parent"
+    android:layout_height="28dp"
+    android:background="@drawable/rounded_edittext"
+    android:hint="@string/address_hint"
+    android:layout_gravity="left" ><requestFocus /></EditText>
+  
+  <!-- Address Error --> 
+  <TextView
+    android:id="@+id/tv_address_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:textColor="#f00"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    android:paddingBottom="15dp" />
+  
+ <!-- Address End-->
+ 
+ 
+  
+  
+ <!--  City Start -->
+  
+ <!--  City Display --> 
+   <TextView
+    android:id="@+id/tv_city"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/city"
+    android:layout_gravity="left"
+    android:textColor="#fff"
+    android:textSize="16sp"
+    android:paddingBottom="5dp" />
+    
+    
+ <!-- City Box -->   
+ <EditText
+  android:id="@+id/ed_city"
+  android:layout_width="fill_parent"
+  android:layout_height="28dp"
+  android:background="@drawable/rounded_edittext"
+  android:hint="@string/city_hint" />
+  
+  
+ <!-- City Error --> 
+   
+ <TextView
+  android:id="@+id/tv_city_error"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="left"
+  android:textColor="#f00"
+  android:textSize="12sp"
+  android:textStyle="bold"
+  android:paddingBottom="15dp" />
+  
+ <!-- City End --> 
+ 
+ 
+  
+ <!-- State Start -->
+ 
+  
+ <!-- State Display -->   
+ <TextView
+ android:id="@+id/tv_street"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:text="@string/state"
+ android:layout_gravity="left"
+ android:textColor="#fff"
+ android:textSize="16sp"
+ android:paddingBottom="5dp" />
+ 
+ <!-- State Dropdown -->
+<Spinner
+ android:id="@+id/sp_state"
+ android:layout_width="fill_parent"
+ android:layout_height="28dp"
+ android:prompt="@string/state_prompt"
+ android:background="@drawable/rounded_edittext" />
+    
+ 
+ <!-- State Error -->
+ 
+<TextView
+ android:id="@+id/tv_state_error"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:layout_gravity="left"
+ android:textColor="#f00"
+ android:textSize="12sp"
+ android:textStyle="bold" />
+ 
+ <!--  State End -->
+ 
+    
+  <!-- Button and Zillo logo Start-->  
+  
+  <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:paddingTop="15dp"
+     android:paddingBottom="15dp" >
+    
+    <Button
+     android:id="@+id/btn_search"
+     android:layout_width="100dp"
+     android:layout_height="35dp"
+     android:layout_gravity="left"
+     android:textSize="18sp"
+     android:text="@string/search"
+     android:layout_alignParentLeft="true"
+     android:background="#d3d3d3" />
+
+   <ImageView 
+    android:id="@+id/iv_zillow_logo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/zillow_alt"
+    android:src="@drawable/zilllow_logo"
+    android:layout_alignParentRight="true"       />
+
+ </RelativeLayout>
+   
+    <!-- Button and Zillo logo End-->
+    
+    
+  <!-- Horizontal Line Start-->
+   
+ <View
+  android:layout_width="match_parent"
+  android:layout_height= "2dp"
+  android:background="#d3d3d3" />
+ 
+ <!-- Horizontal Line End-->
+ 
+ 
+ <!-- Error Text Start -->   
+  <TextView
+   android:id="@+id/tv_invalid_data"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_gravity="left"
+   android:textColor="#fff"
+   android:textSize="18sp"
+   android:textStyle="bold"
+   android:paddingTop="17dp" />
+  
+<!-- Error Text End -->
+
+</LinearLayout>

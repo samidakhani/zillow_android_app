@@ -1,0 +1,8 @@
+keytool -exportcert -alias androiddebugkey -keystore C:\Users\user\.android\debug.keystore | C:\bin\openssl.exe sha1 -binary | C:\bin\openssl.exe base64
+
+
+
+keytool -exportcert -alias ZillowSami -keystore YOUR_RELEASE_KEY_PATH | C:\bin\openssl.exe sha1 -binary | C:\bin\openssl.exe base64
+
+
+Toast.makeText(getApplicationContext(), "Facebook",Toast.LENGTH_LONG).show();

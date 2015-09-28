@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Activity -->
+    <string name="app_name">CSCI571 Homework</string>    
+    <string name="title_message">Search Your Property Here</string>
+    <string name="address">Address*:</string>
+    <string name="address_hint">Street Address</string>
+    <string name="city">City*:</string>
+    <string name="city_hint">City</string>
+    <string name="state">State*:</string>
+    <string name="state_prompt">Choose State</string>
+    <string name="search">Search</string>
+    <string name="zillow_alt">Provided by Zillow</string>
+    
+    <!-- Results -->
+    
+    <string name="tabs_page">Results from Zillow</string>  
+     <string name="moredetails">See more details on Zillow</string>
+    <string name="label1">Property Type</string>
+    <string name="label2">Year Built</string>
+    <string name="label3">Lot Size</string>
+    <string name="label4">Finished Area</string>
+    <string name="label5">Bathrooms</string>
+    <string name="label6">Bedrooms</string>
+    <string name="label7">Tax Assesment Year</string>
+    <string name="label8">Tax Assesment</string>
+    <string name="label9">Last Sold Price</string>
+    <string name="label10">Last Sold Date</string>
+    <string name="label11">Zestimate  Property Estimate as of</string>
+    <string name="label112">14-Nov-2014</string>
+    <string name="label12">30 Days Overall Change</string>
+    <string name="label13">All Time Property Range</string>
+    <string name="label14">Rent Zestimate Valuation as of</string>
+    <string name="label142">14-Nov-2014</string>
+    <string name="label15">30 Days Rent Change</string>
+    <string name="label16">All Time Rent Range</string>
+    <string name="label17">© Zillow, Inc., 2006&#8211;2014.</string>
+    <string name="previous_button">Pervious</string>
+    <string name="next_button">Next</string>
+    <string name="facebookbutton">Share on Facebook</string>
+    <string name="facebook_app_id">1570305249849885</string>
+    <string name="facebooklabel1">Post to Facebook</string>
+    <string name="facebooklabel2">Post Property Details</string>
+    <string name="facebooklabel3">Cancel</string>
+    
+</resources>

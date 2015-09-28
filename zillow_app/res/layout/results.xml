@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  <TabHost
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <!-- 2 Tabs  Display Start -->   
+   <TabWidget
+    android:id="@android:id/tabs"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000" ></TabWidget>
+   
+  <!-- 2 Tabs  Display End-->
+
+    <FrameLayout
+     android:id="@android:id/tabcontent"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" >
+   
+  <!-- Basic Info Tab Start -->
+ 
+    <RelativeLayout
+     android:id="@+id/basicinfotab"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="#000" >
+     
+     <!-- Basic Info tab Header Start -->
+     <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentTop="true"
+     android:id="@+id/basicinfoheader" >
+     </RelativeLayout>
+    <!-- Basic Info tab Header End -->
+          
+
+    <!-- Basic Info tab Footer Start -->
+       <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:gravity="center"
+        android:id="@+id/basicinfofooter">"
+        
+
+       <!-- Zillow Trademark -->
+        <TableRow
+        android:id="@+id/tr1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1sp"
+        android:gravity="center" >
+
+        <TextView
+          android:textSize="12sp"
+          android:id="@+id/tv_trademark"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/label17"
+          android:textColor="#000" />
+    
+       </TableRow>
+
+      <!-- Zillow Terms of Use -->
+        
+         <TableRow
+          android:id="@+id/tr2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tr1"
+          android:layout_margin="1sp"
+          android:gravity="center" >
+
+           <TextView
+           android:textSize="12sp"
+           android:id="@+id/tv_terms"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:textColor="#000" />
+           
+         </TableRow>
+         
+       <!-- Zillow What is Zestimate -->  
+
+         <TableRow
+         android:id="@+id/tr3"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/tr2"
+         android:layout_margin="1sp"
+         android:gravity="center" >
+
+          <TextView
+           android:textSize="12sp"
+           android:id="@+id/tv_zestimate"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#000" />
+          
+            </TableRow>
+            
+     </RelativeLayout>
+    
+  <!-- Basic Info tab Footer End -->
+  
+  
+  <!-- Basic Info tab Scrollview Start -->
+  
+  <ScrollView
+  android:id="@+id/scrollableContents"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_above="@id/basicinfofooter"
+  android:layout_below="@id/basicinfoheader" >
+
+    <TableLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="#d3d3d3"
+     android:shrinkColumns="*"
+     android:stretchColumns="*" >
+
+     <!-- Facebook button -->
+       <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="1sp"
+       android:paddingTop="5sp"
+       android:paddingBottom="5sp"
+       android:gravity="top"                      
+       android:background="#fff" >
+
+         <TextView
+         android:paddingLeft="2sp"
+         android:textSize="12sp"
+         android:text="@string/moredetails"
+         android:layout_gravity="left" >
+         </TextView>
+
+         <ImageButton
+         android:paddingRight="8sp"
+         android:layout_gravity="right"
+         android:id="@+id/fbButton"
+         android:contentDescription="@string/facebookbutton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="@drawable/fbbutton" />
+ 
+       </TableRow>
+
+      <!-- Link to Homedetails --> 
+       <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="1sp"
+       android:paddingTop="3sp"
+       android:paddingBottom="3sp"
+       android:background="#fff" >
+
+         <TextView
+         android:layout_width="fill_parent"
+         android:id="@+id/homedetails"
+         android:textSize="10sp"
+         android:paddingLeft="2sp"
+         android:layout_gravity="left" >
+         </TextView>
+                                
+       </TableRow>
+
+       <!-- Property type -->
+       <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="1sp"
+       android:paddingTop="3sp"
+       android:paddingBottom="3sp"
+       android:background="#cce6ff" >
+
+         <TextView
+         android:textSize="12sp"
+         android:paddingLeft="2sp"                            
+         android:layout_gravity="left"
+         android:text="@string/label1">
+         </TextView>
+
+        <TextView
+        android:textSize="12sp"
+        android:paddingRight="4sp"
+        android:id="@+id/property_type"
+        android:layout_width="match_parent"
+        android:layout_gravity="right">
+        </TextView>
+      </TableRow>
+      
+      <!-- Year Built --> 
+
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:background="#fff" >
+
+         <TextView
+         android:textSize="12sp"
+         android:paddingLeft="2sp"
+         android:layout_gravity="left"
+         android:text="@string/label2" >
+         </TextView>
+
+         <TextView
+         android:textSize="12sp"
+         android:paddingRight="4sp"
+         android:id="@+id/year_built"
+         android:layout_width="match_parent"
+         android:layout_gravity="right">                          
+         </TextView>
+         
+        </TableRow>
+        
+        <!-- Lot Size -->
+
+          <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="1sp"
+          android:paddingTop="3sp"
+          android:paddingBottom="3sp"
+          android:background="#cce6ff" >
+
+          <TextView
+          android:textSize="12sp"
+          android:paddingLeft="2sp"
+          android:layout_gravity="left"
+          android:text="@string/label3" >
+          </TextView>
+
+          <TextView
+          android:textSize="12sp"
+          android:paddingRight="4sp"
+          android:id="@+id/lot_size"
+          android:layout_width="match_parent"
+          android:layout_gravity="right">                         
+          </TextView>
+         </TableRow>
+         
+       <!-- Finished Area -->
+
+       <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="1sp"
+       android:paddingTop="3sp"
+       android:paddingBottom="3sp"
+       android:background="#fff" >
+
+       <TextView
+       android:textSize="12sp"
+       android:paddingLeft="2sp"
+       android:layout_gravity="left"
+       android:text="@string/label4" >
+       </TextView>
+
+      <TextView
+      android:textSize="12sp"
+      android:paddingRight="4sp"
+      android:id="@+id/finished_area"
+      android:layout_width="match_parent"
+      android:layout_gravity="right" >
+     </TextView>
+    </TableRow>
+    
+     <!-- Bathrooms -->  
+
+    <TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1sp"
+    android:paddingTop="3sp"
+    android:paddingBottom="3sp"
+    android:background="#cce6ff" >
+
+    <TextView
+    android:textSize="12sp"
+    android:paddingLeft="2sp"
+    android:layout_gravity="left"
+    android:text="@string/label5" >
+    </TextView>
+
+    <TextView
+    android:textSize="12sp"
+    android:paddingRight="4sp"
+    android:id="@+id/bathrooms"
+    android:layout_width="match_parent"
+    android:layout_gravity="right" >
+                                    
+    </TextView>
+    </TableRow>
+    
+    <!-- Bedrooms -->
+
+     <TableRow
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_margin="1sp"
+     android:paddingTop="3sp"
+     android:paddingBottom="3sp"
+     android:background="#fff" >
+
+     <TextView
+     android:textSize="12sp"
+     android:paddingLeft="2sp"
+     android:layout_gravity="left"
+     android:text="@string/label6" >
+     </TextView>
+
+     <TextView
+     android:textSize="12sp"
+     android:paddingRight="4sp"
+     android:id="@+id/bedrooms"
+     android:layout_width="match_parent"
+     android:layout_gravity="right">                              
+     </TextView>
+    </TableRow>
+    
+   <!-- Tax Assesment Year -->
+    <TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1sp"
+    android:paddingTop="3sp"
+    android:paddingBottom="3sp"
+    android:background="#cce6ff" >
+
+    <TextView
+    android:textSize="12sp"
+    android:paddingLeft="2sp"
+    android:layout_gravity="left"
+    android:text="@string/label7" >
+    </TextView>
+
+    <TextView
+    android:textSize="12sp"
+    android:paddingRight="4sp"
+    android:id="@+id/tax_assesmentyear"
+    android:layout_width="match_parent"
+    android:layout_gravity="right">
+                                    
+    </TextView>
+    </TableRow>
+    
+    <!-- Tax Assesment -->
+                            
+     <TableRow
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_margin="1sp"
+     android:paddingTop="3sp"
+     android:paddingBottom="3sp"
+     android:background="#fff" >
+
+     <TextView
+     android:textSize="12sp"
+     android:paddingLeft="2sp"
+     android:layout_gravity="left"
+     android:text="@string/label8" >
+     </TextView>
+
+     <TextView
+     android:textSize="12sp"
+     android:paddingRight="4sp"
+     android:id="@+id/tax_assesment"
+     android:layout_width="match_parent"
+     android:layout_gravity="right" >
+                                    
+     </TextView>
+    </TableRow>
+    
+     
+
+   <!-- Last Sold Price -->  
+     <TableRow
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_margin="1sp"
+     android:paddingTop="3sp"
+     android:paddingBottom="3sp"
+     android:background="#cce6ff" >
+
+     <TextView
+     android:textSize="12sp"       
+     android:paddingLeft="2sp"
+     android:layout_gravity="left"
+     android:text="@string/label9" >
+     </TextView>
+
+     <TextView
+     android:paddingRight="4sp"
+     android:textSize="12sp"
+     android:id="@+id/last_soldprice"
+     android:layout_width="match_parent"
+     android:layout_gravity="right" >
+                                    
+     </TextView>
+     </TableRow>
+     
+     <!-- Last Sold Date -->
+
+     <TableRow
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_margin="1sp"
+     android:paddingTop="3sp"
+     android:paddingBottom="3sp"
+     android:background="#fff" >
+
+      <TextView
+      android:textSize="12sp"
+      android:paddingLeft="2sp"
+      android:layout_gravity="left"
+      android:text="@string/label10" >
+      </TextView>
+
+      <TextView
+      android:textSize="12sp"
+      android:paddingRight="4sp"
+      android:id="@+id/lastsolddate"
+      android:layout_width="match_parent"
+      android:layout_gravity="right" >
+                                    
+      </TextView>
+      </TableRow>
+
+     <!-- Property Estimate -->
+      <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="1sp"
+      android:layout_marginRight="1sp"
+      android:layout_marginTop="1sp"
+      android:paddingTop="3sp"
+      android:paddingBottom="1sp"
+      android:background="#cce6ff" >
+
+      <TextView
+      android:textSize="12sp"
+      android:paddingLeft="2sp"
+      android:layout_gravity="left"
+      android:text="@string/label11" >
+      </TextView>
+
+      <TextView
+      android:textSize="12sp"
+      android:paddingRight="4sp"
+      android:id="@+id/property_estimate"
+      android:layout_width="match_parent"
+      android:layout_gravity="right">
+                                    
+      </TextView>
+      </TableRow>
+                            
+      
+      <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="1sp"
+      android:layout_marginRight="1sp"
+      android:layout_marginBottom="1sp"
+      android:paddingTop="1sp"
+      android:paddingBottom="3sp"
+      android:background="#cce6ff" >
+
+       <TextView
+       android:id="@+id/property_estimatedate"
+       android:textSize="12sp"
+       android:paddingLeft="2sp"
+       android:layout_gravity="left" >
+                                    
+       </TextView>
+
+     </TableRow>
+     
+      <!-- Overall Change -->
+       <TableRow
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="1sp"
+       android:paddingTop="3sp"
+       android:paddingBottom="3sp"
+       android:background="#fff" >
+
+        <TextView
+        android:textSize="12sp"
+        android:paddingLeft="2sp"
+        android:layout_gravity="left"
+        android:text="@string/label12" >
+        </TextView>
+
+        <TextView
+        android:textSize="12sp"
+        android:paddingRight="4sp"
+        android:id="@+id/overall_change"
+        android:layout_width="match_parent"
+        android:layout_gravity="right">
+                                    
+        </TextView>
+        </TableRow>
+        
+     <!-- Property Range -->  
+
+      <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="1sp"
+      android:paddingTop="3sp"
+      android:paddingBottom="3sp"
+      android:background="#cce6ff" >
+
+      <TextView
+      android:textSize="12sp"
+      android:paddingLeft="2sp"
+      android:layout_gravity="left"
+      android:text="@string/label13" >
+      </TextView>
+
+      <TextView
+      android:textSize="10sp"
+      android:paddingRight="4sp"
+      android:id="@+id/property_range"
+      android:layout_width="match_parent"
+      android:layout_gravity="right" >
+                                    
+      </TextView>
+      </TableRow>
+      
+      <!-- Rent Valuation -->
+
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1sp"
+        android:layout_marginRight="1sp"
+        android:layout_marginTop="1sp"
+        android:paddingTop="1sp"
+        android:paddingBottom="3sp"
+        android:background="#fff" >
+
+        <TextView
+        android:textSize="12sp"
+        android:paddingLeft="2sp"
+        android:layout_gravity="left"
+        android:text="@string/label14" >
+        </TextView>
+
+        <TextView
+        android:textSize="12sp"
+        android:paddingRight="4sp"
+        android:id="@+id/rent_valuation"
+        android:layout_width="match_parent"
+        android:layout_gravity="right" >
+        
+        </TextView>
+        </TableRow>
+                            
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1sp"
+        android:layout_marginRight="1sp"
+        android:layout_marginBottom="1sp"
+        android:paddingTop="1sp"
+        android:paddingBottom="3sp"
+        android:background="#fff" >
+
+        <TextView
+        android:id="@+id/rent_valuationdate"
+        android:textSize="12sp"
+        android:paddingLeft="2sp"
+        android:layout_gravity="left">
+                                    
+        </TextView>
+
+        </TableRow>
+        
+        <!-- Rent Change -->
+                            
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1sp"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:background="#cce6ff" >
+
+          <TextView
+          android:textSize="12sp"
+          android:paddingLeft="2sp"
+          android:layout_gravity="left"
+          android:text="@string/label15" >
+          </TextView>
+
+          <TextView
+          android:textSize="12sp"
+          android:paddingRight="4sp"
+          android:id="@+id/rent_change"
+          android:layout_width="match_parent"
+          android:layout_gravity="right">
+                                    
+          </TextView>
+          </TableRow>
+
+       <!-- Rent Range --> 
+          <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="1sp"
+          android:paddingTop="3sp"
+          android:paddingBottom="3sp"
+          android:background="#fff" >
+
+           <TextView
+           android:textSize="12sp"
+           android:paddingLeft="2sp"
+           android:layout_gravity="left"
+           android:text="@string/label16" >
+          </TextView>
+
+          <TextView
+          android:textSize="10sp"
+          android:paddingRight="4sp"
+          android:id="@+id/rent_range"
+          android:layout_width="match_parent"
+          android:layout_gravity="right" >
+                                   
+          </TextView>
+          </TableRow>
+
+ 
+
+    </TableLayout>
+   </ScrollView>
+                    
+   <!-- Basic Info tab Scrollview End -->
+   
+    </RelativeLayout>
+ 
+<!-- Basic Info Tab End -->
+
+  <!-- Historical Zestimate Start -->
+      <RelativeLayout
+      android:id="@+id/hzestimatetab"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical" >
+  
+    <!-- HZ header start -->
+                    
+     <RelativeLayout
+     android:id="@+id/hzestimateheader"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentTop="true"
+     android:background="#fff"
+     android:gravity="center" >
+
+  <!-- Text Switcher -->       
+     <TableRow
+     android:id="@+id/tr4"
+     android:paddingTop="10sp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_margin="1sp"
+     android:gravity="center" >    
+                                  
+     <TextView
+     android:textStyle="bold"
+     android:textSize="14sp"
+     android:id="@+id/switcher_header"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:gravity="center" />
+                           
+    </TableRow>
+    
+    <!-- Address -->  
+     <TableRow
+     android:id="@+id/tr5"
+     android:paddingTop="10sp"
+     android:paddingBottom="20sp"
+     android:layout_below="@id/tr4"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_margin="1sp"
+     android:gravity="center" > 
+                     
+     <TextView
+     android:textSize="12sp"
+     android:id="@+id/switcher_address"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:gravity="center" />
+                        
+     </TableRow>
+                  
+  </RelativeLayout>
+                   
+<!-- HZ Header End -->
+
+<!-- HZ Foorter Start -->
+
+ <RelativeLayout
+ android:id="@+id/hzestimatefooter"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:layout_alignParentBottom="true"
+ android:background="#fff"
+ android:gravity="center" >
+
+  <!--Scroll Buttons Start -->   
+  <LinearLayout
+  android:id="@+id/buttons"
+  android:layout_marginBottom="20sp"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:background="#fff"
+  android:orientation="horizontal"
+  android:weightSum="100" >
+
+    <Button
+    android:layout_marginLeft="50sp"
+    android:id="@+id/previousbutton"
+    android:textSize="14sp"
+    android:layout_width="100sp"
+    android:layout_height="40sp"
+    android:layout_weight="50"
+    android:text="@string/previous_button" />
+
+    <Button
+    android:layout_marginRight="50sp"
+    android:id="@+id/nextbutton"
+    android:textSize="14sp"
+    android:layout_width="100sp"
+    android:layout_height="40sp"
+    android:layout_weight="50"
+    android:text="@string/next_button" />
+  </LinearLayout>
+
+ <!--Scroll Buttons End -->
+ 
+ 
+ <!-- Zillow Trademark Start --> 
+   <TableRow
+   android:id="@+id/tr6"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_below="@id/buttons"
+   android:layout_margin="1sp"
+   android:gravity="center" >
+
+   <TextView
+   android:textSize="12sp"
+   android:id="@+id/tv_trademark2"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:gravity="center"
+   android:text="@string/label17"  />
+   </TableRow>
+
+<!-- Zillow Trademark End -->
+
+<!-- Zillow Terms of Use Start -->   
+   <TableRow
+   android:id="@+id/tr7"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_below="@id/tr6"
+   android:layout_margin="1sp"
+   android:gravity="center" >
+
+   <TextView
+   android:textSize="12sp"
+   android:id="@+id/tv_terms2"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:gravity="center" />
+   </TableRow>
+
+ <!-- Zillow Terms of Use End -->
+ 
+ <!-- Zillow Zestimate Start-->  
+   
+   <TableRow
+   android:layout_marginBottom="10sp"
+   android:id="@+id/tr8"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_below="@id/tr7"
+   android:layout_margin="1sp"
+   android:gravity="center" >
+
+   <TextView
+   android:textSize="12sp"
+   android:id="@+id/tv_zestimate2"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content" />
+   </TableRow>
+   
+<!-- Zillow Zestimate End-->
+ </RelativeLayout>
+
+  <!-- HZ Foorter End -->
+  
+  <!-- HZ Image Switcher  Start-->
+        <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/hzestimatefooter"
+        android:layout_below="@id/hzestimateheader"
+        android:background="#fff" >
+
+         <ImageView
+         android:id="@+id/carousal"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal" />
+                        
+       </RelativeLayout>
+    <!-- HZ Image Switcher  End-->                
+                    
+   </RelativeLayout>
+
+ <!-- Historical Zestimate End -->               
+   </FrameLayout>
+            
+ </LinearLayout>
+        
+ </TabHost>
+
+</LinearLayout>
